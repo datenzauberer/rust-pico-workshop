@@ -11,12 +11,19 @@ Daher sollte der Hardwareeinsatz sollte so gering wie möglich sein.
 Allerdings benötigt man zum Debuggen einen sogenannten Debug Probe.
 Hier kann entweder der offizielle [Raspberry Pi Debug Probe](https://www.raspberrypi.com/documentation/microcontrollers/debug-probe.html) (V1)
 verwendet werden, oder ein normaler Pico mit Breadboard und Verdrahtung (V2).
-Vorteil an V1: 
+
+Vorteil an V1:
+
  * einfacheres Setup
+ 
  * geringere Fehlermöglichkeiten
+ 
 Vorteil an V2: 
+
  * kostengünstiger
+ 
  * Debug Pico kann für andere Einsatzgebiete verwendet werden
+
 Einen Debuging Probe würden wir einsetzen, auch wenn's etwas teuerer wird.
 Ein Breadboard und Kabel bräuchten wir in beiden Fällen.
 
@@ -44,6 +51,7 @@ Teilnehmende lernen, wie sie ihre Entwicklungsumgebung einrichten, einfache Prog
 Dieser Workshop ist darauf ausgelegt, einen praktischen Einstieg in die Programmierung von Embedded-Systemen mit Rust zu bieten. Er richtet sich an alle, die Interesse daran haben, wie man mit Rust effiziente und sichere Software für Mikrocontroller entwickelt. Begleiten Sie uns, um die Grundlagen zu erlernen und erste Schritte in der Entwicklung von Embedded-Projekten mit dem Raspberry Pi Pico zu machen.
 
 Ihr könnt einfach zuhören oder mitmachen. Technische Voraussetzungen sind ein Notebook, am besten mit Linux und Rust vorinstalliert, sowie zwei Micro-USB-Kabel. Ideal wäre zudem die Verfügbarkeit eines Raspberry Pi Pico und eines Debug Probes. Für bis zu zehn Teilnehmer können die Picos gestellt werden.
+
 TODO: Breadboard, LED(s), Taster und Kabel sind auch noch notwendig.
 
 ### TODO: Beschreibung: (optional)
