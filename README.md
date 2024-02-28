@@ -1,4 +1,4 @@
-# Planung: Einstieg in Embedded Rust mit dem Raspberry Pico
+# Planung: Einstieg in Embedded Rust mit dem Raspberry PicoW
 
 ## Allgemeines
 
@@ -44,13 +44,13 @@ Die meisten Voträge sind in Deutsch.
 
 ### Zusammenfassung:
 
-Tauchen Sie ein in die Welt der Embedded-Systeme mit unserem Workshop, der sich auf Rust und den Raspberry Pi Pico konzentriert. Ideal für Anfänger sowie für Fortgeschrittene geeignet, zielt dieser Kurs darauf ab, eine Einführung in die Entwicklungsumgebung und die Grundlagen der Rust-Programmierung zu bieten. Der Raspberry Pi Pico wird wegen seines günstigen Preises und der Vielzahl an Peripheriegeräten als Lehrmittel verwendet.
+Tauchen Sie mit unserem Workshop in die Welt der Embedded-Systeme ein, der sich auf Rust und den Raspberry Pi Pico WH konzentriert. Vorkenntnisse in Programmierung (unabhängig von der Sprache) und erste Erfahrungen im Embedded-Bereich sind empfehlenswert. Der Raspberry Pi Pico WH wird aufgrund seines günstigen Preises und der umfangreichen Auswahl an Peripheriegeräten als Lehrmittel eingesetzt.
 
-Teilnehmende lernen, wie sie ihre Entwicklungsumgebung einrichten, einfache Programme wie das 'Blinky'-Beispiel implementieren, Eingaben über Taster verarbeiten und Daten mittels USB-Kommunikation austauschen. 
+Teilnehmende lernen, wie sie ihre Entwicklungsumgebung einrichten, einfache Programme wie das 'Blinky'-Beispiel implementieren und Eingaben über Taster verarbeiten.
 
-Dieser Workshop ist darauf ausgelegt, einen praktischen Einstieg in die Programmierung von Embedded-Systemen mit Rust zu bieten. Er richtet sich an alle, die Interesse daran haben, wie man mit Rust effiziente und sichere Software für Mikrocontroller entwickelt. Begleiten Sie uns, um die Grundlagen zu erlernen und erste Schritte in der Entwicklung von Embedded-Projekten mit dem Raspberry Pi Pico zu machen.
+Dieser Workshop ist darauf ausgelegt, einen praktischen Einstieg in die Programmierung von Embedded-Systemen mit Rust zu bieten. Er richtet sich an alle, die Interesse daran haben, wie man mit Rust effiziente und sichere Software für Mikrocontroller entwickelt. Begleiten Sie uns, um die Grundlagen zu erlernen und erste Schritte in der Entwicklung von Embedded-Projekten mit dem Raspberry Pi Pico WH zu machen.
 
-Ihr könnt einfach zuhören oder mitmachen. Technische Voraussetzungen sind ein Notebook, am besten mit Linux und Rust vorinstalliert, sowie zwei Micro-USB-Kabel. Ideal wäre zudem die Verfügbarkeit eines Raspberry Pi Pico und eines Debug Probes. Für bis zu zehn Teilnehmer können die Picos gestellt werden.
+Ihr könnt einfach zuhören oder mitmachen. Technische Voraussetzungen sind ein Notebook, am besten mit Linux und Rust vorinstalliert, sowie eines Micro-USB-Kabel. Ideal wäre zudem die Verfügbarkeit eines Raspberry Pi Pico oder Pico W oder Pico WH und eines Debug Probes. Für bis zu zehn Teilnehmer können die Picos gestellt werden.
 
 TODO: Breadboard, LED(s), Taster und Kabel sind auch noch notwendig.
 
