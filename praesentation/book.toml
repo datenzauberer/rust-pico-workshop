@@ -1,0 +1,7 @@
+[book]
+title = "LinuxTag 2024: Einstieg in Embedded Rust mit dem Raspberry Pico W"
+authors = ["Tiago Manczak", "Michael Schury"]
+multilingual = false
+src = "src"
+language = "de"
+
