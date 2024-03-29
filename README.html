@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>README.html</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+
+</head>
+
+<body>
+
+<h1 id="planung-für-einstieg-in-embedded-rust-mit-dem-raspberry-pico-wh-für-den-augsburger-linux-infotag-2024">Planung für <a href="https://www.luga.de/static/LIT-2024/talks/einstieg_in_embedded_rust_mit_dem_raspberry_pico_wh/">Einstieg in Embedded Rust mit dem Raspberry Pico WH</a> für den <a href="https://www.luga.de/static/LIT-2024">Augsburger Linux-Infotag 2024</a></h1>
+<p>um 10:45 im Raum Raum F für 105min</p>
+<p>Tauchen Sie mit unserem Workshop in die Welt der Embedded-Systeme ein, der sich auf Rust und den Raspberry Pi Pico WH konzentriert. Vorkenntnisse in Programmierung (unabhängig von der Sprache) und erste Erfahrungen im Embedded-Bereich sind empfehlenswert. Der Raspberry Pi Pico WH wird aufgrund seines günstigen Preises und der umfangreichen Auswahl an Peripheriegeräten als Lehrmittel eingesetzt.</p>
+<p>Teilnehmende lernen, wie sie ihre Entwicklungsumgebung einrichten, einfache Programme wie das ‘Blinky’-Beispiel implementieren und Eingaben über Taster verarbeiten.</p>
+<p>Dieser Workshop ist darauf ausgelegt, einen praktischen Einstieg in die Programmierung von Embedded-Systemen mit Rust zu bieten. Er richtet sich an alle, die Interesse daran haben, wie man mit Rust effiziente und sichere Software für Mikrocontroller entwickelt. Begleiten Sie uns, um die Grundlagen zu erlernen und erste Schritte in der Entwicklung von Embedded-Projekten mit dem Raspberry Pi Pico WH zu machen.</p>
+<p>Ihr könnt einfach zuhören oder mitmachen. Technische Voraussetzungen sind ein Notebook, am besten mit Linux und Rust vorinstalliert, sowie eines Micro-USB-Kabel. Ideal wäre zudem die Verfügbarkeit eines Raspberry Pi Pico oder Pico W oder Pico WH und eines Debug Probes. Für bis zu zehn Teilnehmer können die Picos gestellt werden.</p>
+<h1 id="kanban-board">Kanban Board</h1>
+<p>Ein <a href="https://github.com/orgs/rust-augsburg/projects/1/views/1">Kanban Board</a> ist auch schon eingerichtet. Damit könnt ihr den aktuellen Bearbeitungsstand verfolgen und eigene Aufgaben eintragen.</p>
+<h1 id="verzeichnisstruktur">Verzeichnisstruktur</h1>
+<p><code>praesentation</code> enthält die Präsentation. <code>doc</code> Dokumentation von Claudia und Memory Game <code>memory-game</code> Code</p>
+<h2 id="lokales-erstellung-der-präsentation">Lokales Erstellung der Präsentation</h2>
+<p>Die Präsentation wird mit <a href="https://rust-lang.github.io/mdBook/">mdBook</a> erstellt. Falls ihr mdBook noch nicht kennt, seid ihr ihm möglicherweise unbewusst bereits begegnet. Ein Beispiel dafür ist das <a href="https://doc.rust-lang.org/stable/book/">Rust Buch</a>, welches damit erstellt wurde. Weitere Informationen findet ihr unter: <a href="https://rust-lang.github.io/mdBook/" class="uri">https://rust-lang.github.io/mdBook/</a>."</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="co"># ggf. Installation mdbook</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="ex">cargo</span> install mdbook</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a><span class="bu">cd</span> ./praesentation</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a><span class="ex">mdbook</span> serve --open</span></code></pre></div>
+<p>Die Datei <a href="./praesentation/src/SUMMARY.md">./praesentation/src/SUMMARY.md</a> enthält die Gliederung.</p>
+
+</body>
+</html>

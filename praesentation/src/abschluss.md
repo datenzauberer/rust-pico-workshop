@@ -15,7 +15,7 @@ Uns interessiert, welche Themen die Anwender noch interessieren.
 Idee wäre, dass die Benutzer drei Klebepunkte erhalten und diese anklicken.
 
 Folgende Vorschläge (unsererseits):
- * Memory SMPRIO
+ * Memory Game
  * RTC
  * PWM
  * PIO

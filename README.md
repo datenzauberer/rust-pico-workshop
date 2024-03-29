@@ -18,6 +18,8 @@ Ein [Kanban Board](https://github.com/orgs/rust-augsburg/projects/1/views/1) ist
 # Verzeichnisstruktur
 
 `praesentation` enthält die Präsentation.
+`doc` Dokumentation von Claudia und Memory Game
+`memory-game` Code
 
 ## Lokales Erstellung der Präsentation
 
