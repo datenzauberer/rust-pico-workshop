@@ -1,36 +1,113 @@
-# Setup des Comput
+# Setup Allgemein
 
-Aus Zeitgründen wär's hilfreich, wenn die Teilnehmer das Setup schon vorher durchgeführt hätten. In der Ankündigung ist das Setup allerdings im Workshop mit inbegriffen.
-Aufgrund der kurzen Workshopdauer würde wir Euch bitten, Euren Laptop zu Hause vorzubereiten.
+**Um sicherzustellen, dass wir im Workshop direkt loslegen können, wäre es super, wenn ihr das Setup der Entwicklungsumgebung schon vorab erledigen könntet. Vielen Dank!**. 
 
-Im folgenden ist die Installation unter Ubuntu 22.04 LTS exemplarisch beschrieben.
-Solltet ihr ein anderes OS nutzen bitte die entsprechenden Installationsanleitungen lesen.
+Im Folgenden ist die Installation unter Ubuntu 22.04 LTS exemplarisch beschrieben. Solltet ihr ein anderes Betriebssystem nutzen, lest bitte die entsprechenden Installationsanleitungen.
 
-Das hier beschrieben Setup wird im Workshop verwendet. Das Debuggen erfolgt über probe-rs. 
-Zu möglicher Fehleranalyse wär's hilfreich, wenn minicom sowie openocd installiert ist. (Wenn's installiert ist wird's sicher nicht gebraucht).
+Zur Information für Neugierige: Im Workshop werden wir zwei Raspberry Pi Picos verwenden. Einer wird als 'Debug-Probe' und der andere als 'Target' verwendet (näheres uner ["Debug Probe"](./debugprobe.md)'Debug-Probe'). Obwohl die Entwicklung ohne eine Debug-Probe möglich ist, kann sie mit der Zeit umständlich werden, da der Pico vor jedem Flash-Vorgang immer wieder in den BOOTSEL-Modus versetzt werden muss.
 
-Trotzdem wärs sinnvoll, wenn openocd auf dem Rechner installiert ist.
+# Setup der Entwicklungsumgebung
 
-Installation der Tools:
+Die folgende Beschreibung des Setups setzt voraus, dass Ubuntu 22.04 LTS verwendet wird.
 
- * rustup
- * embedded tools
- * vscode
- * installation serial terminal: minicom
- * OpenOCD
- * debugging gdb
+## Ubuntu 22.04 einrichten
+
+**Bitte stellt sicher, dass Ihre Ubuntu 22.04-Installation wie unten beschrieben eingerichtet ist.**
+
+```sh
+sudo apt update
+sudo apt install -y git
+# curl wird für die Installation von rust benötigt
+sudo apt install -y curl
+# libudev-dev wird für die Fehlersuche benötigt
+sudo apt install -y libudev-dev
+
+# für Cargo-Generierung:
+sudo apt install -y build-essential
+sudo apt install -y pkg-config libssl-dev
+```
+
+## Visual Studio Code (VSCode)
+
+Lade VS Code von der offiziellen Website herunter: https://code.visualstudio.com/download
+
+Installiere es, z.B.:
+
+```sh
+sudo apt install ~/Downloads/code_1.87.2-1709912201_amd64.deb
+```
+
+Installiere die VS Code Erweiterungen (über die Kommandozeile):
+
+```sh
+# rust development
+code --install-extension rust-lang.rust-analyzer
+# debug rust code
+code --install-extension vadimcn.vscode-lldb # auf macOS/Linux
+#code --install-extension ms-vscode.cpptools # unter Windows
+# für die Fehlersuche mit probe-rs:
+code --install-extension probe-rs.probe-rs-debugger
+```
+
+Starte VS Code:
+
+* Starte VS Code aus dem Terminal mit `code` oder über das Anwendungsmenü.
+
+## Rust installieren
+
+Folge den offiziellen Rust-Installationsanweisungen, um Rust zu installieren, einschließlich des Compilers (rustc) und des Paketmanagers (cargo): https://www.rust-lang.org/tools/install
+
+Führen den folgenden Installationsbefehl aus (mit einer "1 Standard Installation").
+
+```sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+**Neustart der Shell** oder setzen der  Umgebungsvariablen wie in der Terminalausgabe angegeben (z.B. für Bash: `source $HOME/.cargo/env`).
+
+### Überprüfe Rust-Installation
+
+```sh
+rustc --version
+```
+
+Dieser Befehl liefert die Version des Rust-Compilers, `rustc`, zurückgeben, welcher aktuell auf Ihrem System verwendet wird. Dies ist zum Beispiel `rustc 1.77.1 (7cf61ebde 2024-03-27)`, wobei die Versionsnummer und das Veröffentlichungsdatum angegeben werden.
+
+Cargo ist der Paketmanager und das Build-System von Rust. Um zu überprüfen, ob Cargo korrekt installiert ist und um seine Version zu sehen:
+
+```sh
+cargo --version
+```
+
+## Embedded Rust Development Dependencies
+
+Installiere `cargo-generate`:
+
+```sh
+cargo installieren cargo-generieren
+```
+
+Wenn die Installation aufgrund fehlender Abhängigkeiten fehlschlägt, die benötigten Pakete wie in [Ubuntu 22.04 setup](#ubuntu-2204-setup) beschrieben installieren.
+
+Folge den Installationsanweisunge [`rp-rs/rp-hal` *Getting Started*](https://github.com/rp-rs/rp-hal?tab=readme-ov-file#getting-started):
+
+```sh
+rustup selbst aktualisieren
+rustup update stable
+rustup target hinzufügen thumbv6m-none-eabi
+cargo install elf2uf2-rs --locked
+cargo install probe-rs --features cli --locked
+cargo install flip-link
+```
+
+Wenn die Installation aufgrund fehlender Abhängigkeiten fehlschlägt, die benötigten Pakete wie in [Ubuntu 22.04 setup](#ubuntu-2204-setup) beschrieben installieren.
 
 
-Im Workshop werden wir zwei Picos verwenden,
+**ACHTUNG: Aktualisiere die `/etc/udev/rules.d`** (wie in der [Probe.rs Dokumentation](https://probe.rs/docs/getting-started/probe-setup/#linux%3A-udev-rules) beschrieben):
 
-Aufsetzen des Picoprobe-Umgebunge:
-siehe: <https://www.raspberrypi.com/documentation/microcontrollers/debug-probe.html> und mit zwei Picos:
-[Getting Started with Pico - Appendix A: Using Picoprobe](https://datasheets.raspberrypi.com/pico/getting-started-with-pico.pdf#page=62)
-
-
-Die Stromversorgung des PicoB erfolgt über den PicoA.
-Daher muss nur PicoA an USB angeschlossen werden.
-
-
-
-
+```sh
+curl -o ~/Downloads/69-probe-rs.rules https://probe.rs/files/69-probe-rs.rules
+sudo cp ~/Downloads/69-probe-rs.rules /etc/udev/rules.d
+sudo udevadm Steuerung --reload
+sudo udevadm trigger
+```
