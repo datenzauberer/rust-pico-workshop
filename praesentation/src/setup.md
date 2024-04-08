@@ -85,7 +85,7 @@ cargo --version
 Installiere `cargo-generate`:
 
 ```sh
-cargo installieren cargo-generieren
+cargo install cargo-generate
 ```
 
 Wenn die Installation aufgrund fehlender Abhängigkeiten fehlschlägt, die benötigten Pakete wie in [Ubuntu 22.04 setup](#ubuntu-2204-setup) beschrieben installieren.
@@ -93,7 +93,7 @@ Wenn die Installation aufgrund fehlender Abhängigkeiten fehlschlägt, die benö
 Folge den Installationsanweisunge [`rp-rs/rp-hal` *Getting Started*](https://github.com/rp-rs/rp-hal?tab=readme-ov-file#getting-started):
 
 ```sh
-rustup selbst aktualisieren
+rustup self update
 rustup update stable
 rustup target hinzufügen thumbv6m-none-eabi
 cargo install elf2uf2-rs --locked
