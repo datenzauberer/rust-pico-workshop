@@ -4,7 +4,7 @@
 
 Im Folgenden ist die Installation unter Ubuntu 22.04 LTS exemplarisch beschrieben. Solltet ihr ein anderes Betriebssystem nutzen, lest bitte die entsprechenden Installationsanleitungen.
 
-Zur Information für Neugierige: Im Workshop werden wir zwei Raspberry Pi Picos verwenden. Einer wird als 'Debug-Probe' und der andere als 'Target' verwendet (näheres unter ["Debug Probe"](./debugprobe.md)). Obwohl die Entwicklung ohne eine Debug-Probe möglich ist, kann sie mit der Zeit umständlich werden, da der Pico vor jedem Flash-Vorgang immer wieder in den BOOTSEL-Modus versetzt werden muss.
+Zur Information für Neugierige: Im Workshop werden wir zwei Raspberry Pi Pico verwenden. Einer wird als 'Debug-Probe' und der andere als 'Target' verwendet (näheres unter ["Debug Probe"](./debugprobe.md)). Obwohl die Entwicklung ohne Debug-Probe möglich ist, kann sie mit der Zeit umständlich werden, da der Pico vor jedem Flash-Vorgang immer wieder in den BOOTSEL-Modus versetzt werden muss.
 
 # Setup der Entwicklungsumgebung
 
