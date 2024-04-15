@@ -8,6 +8,7 @@
 - [Rust Embedded](./rust-embedded.md)
   - [`no_std`-Umgebung]()
   - [Architektur von Embedded Rust](./rust-embedded-architecture-pico.md)
+- [Praxis](./praxis.md)
 - [Blinky](./blinky.md)
 - [General Purpose Input/Output (GPIO)](./gpio.md)
 - [Analog-to-digital converter

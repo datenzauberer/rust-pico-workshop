@@ -20,14 +20,14 @@ sudo cp ~/Downloads/debugprobe_on_pico.uf2 /media/michael/RPI-RP2
 
 ### Debug Wiring (SWD and UART bridge)
 
-| PicoA |              | PicoB  |              |
+| PicoA |              |  PicoB |              |
 |------:|--------------|-------:|--------------|
-| Pin   | Description  | Pin    | Description  |
-| 38    | GND          | Debug2 | GND          |
-| 4     | GP2          | Debug1 | SWCLK        |
-| 5     | GP3          | Debug3 | SWDIO        |
-| 6     | GP4/UART1 TX |      2 | GP1/UART0 RX |
-| 7     | GP5/UART1 RX |      1 | GP1/UART0 RX |
+|   Pin | Description  |    Pin | Description  |
+|    38 | GND          | Debug2 | GND          |
+|     4 | GP2          | Debug1 | SWCLK        |
+|     5 | GP3          | Debug3 | SWDIO        |
+|     6 | GP4/UART1 TX |      2 | GP1/UART0 RX |
+|     7 | GP5/UART1 RX |      1 | GP1/UART0 RX |
 
 **Note**: DebugPins are numbered from left to right when the USB connector is facing up.
 
@@ -35,10 +35,10 @@ sudo cp ~/Downloads/debugprobe_on_pico.uf2 /media/michael/RPI-RP2
 
 One advantage of using a Pico as a debug probe is that no separate power supply for the PicoB is needed:
 
-| PicoA |              | PicoB  |              |
-|------:|--------------|-------:|--------------|
-| Pin   | Description  | Pin    | Description  |
-| 39    | VSYS         | 39 | VSYS         |
+| PicoA |             | PicoB |             |
+|------:|-------------|------:|-------------|
+|   Pin | Description |   Pin | Description |
+|    39 | VSYS        |    39 | VSYS        |
 
 Of course It's also possible to provide the power the PicoB via USB. 
 
