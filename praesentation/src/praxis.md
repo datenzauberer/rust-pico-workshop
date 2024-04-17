@@ -148,6 +148,10 @@ Taster als Schalter: Durch Betätigen des Tasters wird die LED eingeschaltet, be
 
 ### Beispiel4: LED mit PWM ansteuern
 
+Wichtige Information: LED ist auf GPIO15. 
+Hierzu muss aus dem Dateblatt die Slice und die Channel ermittelt werden. Ansonsten kann das rp2040-hal SMTODO Beispiel verwendet werden.
+
+
 #### Lösung
 
 ```rust
