@@ -11,10 +11,27 @@
  * female-female-cable (zur Verbindung mit Debug Probe: 3 DebugPins)
  * female-male-cable (zur Verbindung mit Debug Probe: UART und Power)
 
+## Steckbrettaufbau
+
+![alt text](workshop_bb.png)
+
+**Belegte PINs von Target Pico:**
+
+```
+GP14 Taster
+GP15 LED
+GP26 / ADC0 Potentiometer
+```
+
+## Schaltplan
+
+![alt text](workshop_schem.png)
+
 # Steckbrettverdrahtung
 
 Für DebugPico sind die Pins entsprechend der Nummerierung auf dem Pico-Board angeordnet. 
 Für die linke und rechte Seite des Steckbretts folgt die Pin-Nummerierung der jeweiligen Steckbrettnummerierung
+
 
 ## Steckbrett Linke Seite
 
