@@ -1,6 +1,5 @@
 # Unsichtbar
 
-- [Agenda](./agenda.md)
 - [Einleitung](./einleitung.md)
 - [Setup der Entwicklungsumgebung](./setup.md)
 - [Rust Grundlagen](./rust-grundlagen.md)
