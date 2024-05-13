@@ -95,7 +95,7 @@ Folge den Installationsanweisunge [`rp-rs/rp-hal` *Getting Started*](https://git
 ```sh
 rustup self update
 rustup update stable
-rustup target hinzufügen thumbv6m-none-eabi
+rustup target add thumbv6m-none-eabi
 cargo install elf2uf2-rs --locked
 cargo install probe-rs --features cli --locked
 cargo install flip-link
@@ -109,6 +109,16 @@ Wenn die Installation aufgrund fehlender Abhängigkeiten fehlschlägt, die benö
 ```sh
 curl -o ~/Downloads/69-probe-rs.rules https://probe.rs/files/69-probe-rs.rules
 sudo cp ~/Downloads/69-probe-rs.rules /etc/udev/rules.d
-sudo udevadm Steuerung --reload
+sudo udevadm control --reload
 sudo udevadm trigger
+```
+
+### Dokumentationserstellung
+
+Zur Erstellung dieser Dokumentation bitte folgende Tools installieren:
+
+```sh
+cargo install mdbook
+cargo install mdbook-toc
+cargo install mdbook-pdf
 ```

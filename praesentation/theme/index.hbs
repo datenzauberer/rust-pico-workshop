@@ -166,14 +166,33 @@
                         {{/if}}
                     </div>
 
-<!-- DONE: Rust Augsburg Icon-->
-<div style="display: flex; justify-content: space-between; align-items: center;">
-  <h1 class="menu-title">{{ book_title }}</h1>
-  <img src="logo-meetup-augsburg-232x232-transparent.jpg" alt="Book Icon" width="20" height="20">
+<!-- Rust Augsburg Icon-->
+<div style="display: flex; align-items: center;">
+    <img src="logo-meetup-augsburg-232x232-transparent.jpg" alt="Book Icon" width="20" height="20">
+    <h1 class="menu-title">{{ book_title }}</h1>
+    <!-- is moved here that the buttons are always on the right (also for smaller screen sizes) -->
+    <div class="right-buttons">
+        {{#if print_enable}}
+        <a href="{{ path_to_root }}print.html" title="Print this book" aria-label="Print this book">
+            <i id="print-button" class="fa fa-print"></i>
+        </a>
+        {{/if}}
+        {{#if git_repository_url}}
+        <a href="{{git_repository_url}}" title="Git repository" aria-label="Git repository">
+            <i id="git-repository-button" class="fa {{git_repository_icon}}"></i>
+        </a>
+        {{/if}}
+        {{#if git_repository_edit_url}}
+        <a href="{{git_repository_edit_url}}" title="Suggest an edit" aria-label="Suggest an edit">
+            <i id="git-edit-button" class="fa fa-edit"></i>
+        </a>
+        {{/if}}
+
+    </div>
+
 </div>
 <!--
                     <h1 class="menu-title">{{ book_title }}</h1>
--->
                     <div class="right-buttons">
                         {{#if print_enable}}
                         <a href="{{ path_to_root }}print.html" title="Print this book" aria-label="Print this book">
@@ -192,6 +211,8 @@
                         {{/if}}
 
                     </div>
+
+-->
                 </div>
 
                 {{#if search_enabled}}

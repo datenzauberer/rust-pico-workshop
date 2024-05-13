@@ -1,20 +1,11 @@
-# Zusammenfassung des Workshops
+# Abschluss
 
-Wiederholung der Kernpunkte
+## Fragen und Antworten
 
-# Fragen und Antworten
-
-# Rückmeldung
-
-Kurze Rückmeldung seitens der Teilnehmer.
-
-# Info zu weiteren Praxis-Themen einholen
-
-Uns interessiert, welche Themen die Anwender noch interessieren.
-
-Idee wäre, dass die Benutzer drei Klebepunkte erhalten und diese anklicken.
+## Weiteren Praxis-Themen einholen
 
 Folgende Vorschläge (unsererseits):
+
  * Memory Game
  * RTC
  * PWM
@@ -26,7 +17,8 @@ Folgende Vorschläge (unsererseits):
  * Wi-fi
  * Bluetooth
 
-# Nächsten Workshop-Termin bekanntgeben
+Habt Ihr Vorschläge und Ideen ??
 
-Wir wollen gleich den nächsten Workshop-Termin ankündigen.  
-Aktuell geplant: Sa. 08.06.2024 (Ort, Themen noch unklar)
+## Nächste Schritte
+
+<img style="vertical-align: middle;" src="logo-meetup-augsburg-232x232-transparent.jpg" alt="logo augsburg"  width="20px" height="20px">&nbsp;[Rust Augsburg Meetup 16.05.2024](https://www.meetup.com/rust-meetup-augsburg/events/300174327/)

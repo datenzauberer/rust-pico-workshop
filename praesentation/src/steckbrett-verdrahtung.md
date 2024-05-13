@@ -7,9 +7,9 @@
  * LED
  * Taster
  * Widerstand 670 Ohm
- * Potentiometer
- * female-female-cable (zur Verbindung mit Debug Probe: 3 DebugPins)
- * female-male-cable (zur Verbindung mit Debug Probe: UART und Power)
+ * Potentiometer 470 KOhm
+ * Female-Female-cable (zur Verbindung mit Debug Probe: 3 DebugPins)
+ * Female-Male-cable (zur Verbindung mit Debug Probe: UART und Power)
 
 ## Steckbrettaufbau
 
