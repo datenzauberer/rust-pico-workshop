@@ -95,7 +95,7 @@ rustup self update
 rustup update stable
 rustup target add thumbv6m-none-eabi
 cargo install elf2uf2-rs --locked
-cargo install probe-rs --features cli --locked
+cargo install probe-rs-tools --features cli --locked
 cargo install flip-link
 ```
 
